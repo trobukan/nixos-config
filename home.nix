@@ -1,7 +1,6 @@
 {
   _config,
   pkgs,
-  inputs,
   ...
 }:
 
@@ -11,6 +10,7 @@
     ./modules/home/kitty.nix
     ./modules/home/neovim.nix
     ./modules/home/fuzzel.nix
+    ./modules/home/cursor.nix
 
     ./modules/home/niri/niri.nix
     ./modules/home/yazi/yazi.nix
