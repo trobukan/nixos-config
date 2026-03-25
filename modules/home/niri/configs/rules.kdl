@@ -1,0 +1,38 @@
+
+
+//  All applications
+window-rule {
+  geometry-corner-radius 0
+  clip-to-geometry true
+  draw-border-with-background false
+}
+
+
+// Zen Browser
+window-rule {
+  match app-id=r#"zen-browser$"# title="^Picture-in-Picture$"
+  open-floating true 
+}
+
+// Love2D
+window-rule {
+  match app-id=r#"love$"# 
+
+  open-floating true
+}
+
+// Launcher 
+window-rule {
+  match app-id="launcher"
+  
+
+  default-column-width { proportion 0.5; }
+  default-window-height { proportion 0.5; }
+  open-floating true
+}
+
+// Background layer 
+layer-rule {
+    place-within-backdrop true
+}
+

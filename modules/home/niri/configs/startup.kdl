@@ -1,0 +1,4 @@
+    spawn-sh-at-startup "/usr/lib/polkit-kde-authentication-agent-1 &" // Polkit
+    spawn-sh-at-startup "swww-daemon" // Wallpaper daemon
+    spawn-sh-at-startup "swww img /usr/share/wallpapers/rennala.png" // Set wallpaper
+    spawn-sh-at-startup "waybar" // Launch waybar
