@@ -2,8 +2,17 @@
   description = "NixOs Configuration";
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
-    home-manager.url = "github:nix-community/home-manager";
-    home-manager.inputs.nixpkgs.follows = "nixpkgs";
+
+    home-manager = {
+      url = "github:nix-community/home-manager";
+      home-manager.inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    nix-yazi-plugins = {
+      url = "github:lordkekz/nix-yazi-plugins?ref=yazi-v0.3.1";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     fsel.url = "github:Mjoyufull/fsel";
   };
 

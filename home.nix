@@ -9,6 +9,8 @@
   imports = [
     ./modules/home/sh.nix
     ./modules/home/kitty.nix
+    ./modules/home/yazi.nix
+
     ./modules/home/niri/niri.nix
     ./modules/home/waybar/waybar.nix
   ];
@@ -34,7 +36,6 @@
     trash-cli
 
     imagemagick
-    yazi
     librewolf
     zathura
     ncpamixer
