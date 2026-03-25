@@ -6,7 +6,7 @@
     settings = {
       add_newline = true;
       format = ''
-        $directory$git_status $git_branch
+        $directory $git_status$git_branch
         $character
       '';
       character = {
@@ -23,6 +23,7 @@
   programs.zoxide = {
     enable = true;
     enableBashIntegration = true;
+    options = [ "--cmd cd" ];
   };
 
   programs.bash = {

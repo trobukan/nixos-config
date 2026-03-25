@@ -52,10 +52,7 @@
         name = "trobukan";
         email = "trobukan@gmail.com";
       };
-      safe.directory = "/etc/nixos";
-
     };
-
   };
 
   home.stateVersion = "25.11";

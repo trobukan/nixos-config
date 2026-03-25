@@ -104,41 +104,17 @@
     librewolf
     vim
     wget
-    btop
     stow
-    waybar
-    yazi
-    swww
-    vesktop
-    gcc
-    zoxide
-    flow-control
-    go
-    fzf
-    fd
     unzip
-    zig
     luajitPackages.luarocks_bootstrap
     luajit_2_0
     love
-    nodejs_24
-    ripgrep
     cargo
     ncpamixer
     zathura
     sqlite
     libnotify
-    gnumake
 
-    (python3.withPackages (
-      ps: with ps; [
-        pip
-        pynvim
-        setuptools
-      ]
-    ))
-
-    imagemagick
     trash-cli
     ghostscript
     tectonic
