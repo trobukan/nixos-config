@@ -9,6 +9,7 @@
   imports = [
     ./modules/home/sh.nix
     ./modules/home/kitty.nix
+    ./modules/home/neovim.nix
 
     ./modules/home/niri/niri.nix
     ./modules/home/yazi/yazi.nix
@@ -27,8 +28,8 @@
     go
     cargo
     gnumake
-    nodejs_24
-    python311
+    nodejs
+    python3
     sqlite
     love
     luajitPackages.luarocks_bootstrap

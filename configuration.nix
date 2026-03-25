@@ -92,32 +92,11 @@
   services.openssh.enable = true;
 
   programs.niri.enable = true;
-  programs.neovim = {
-    enable = true;
-    defaultEditor = true;
-    viAlias = true;
-    vimAlias = true;
-  };
 
   environment.systemPackages = with pkgs; [
-    inputs.fsel.packages.${pkgs.stdenv.hostPlatform.system}.default
-    librewolf
     vim
     wget
-    stow
     unzip
-    luajitPackages.luarocks_bootstrap
-    luajit_2_0
-    love
-    cargo
-    ncpamixer
-    zathura
-    sqlite
-    libnotify
-
-    trash-cli
-    ghostscript
-    tectonic
     git
   ];
 
