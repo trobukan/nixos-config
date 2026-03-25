@@ -6,7 +6,7 @@
     settings = {
       add_newline = true;
       format = ''
-        $directory$git_status$git_branch
+        $directory$git_status $git_branch
         $character
       '';
       character = {
@@ -18,6 +18,11 @@
         format = "[$path]($style)";
       };
     };
+  };
+
+  programs.zoxide = {
+    enable = true;
+    enableBashIntegration = true;
   };
 
   programs.bash = {

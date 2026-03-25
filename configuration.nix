@@ -142,6 +142,7 @@
     trash-cli
     ghostscript
     tectonic
+    git
   ];
 
   fonts = {
@@ -154,10 +155,6 @@
         "JetbrainsMonoNL Nerd Font"
       ];
     };
-  };
-
-  environment.shellAliases = {
-    rebuild = "sudo nixos-rebuild switch --flake '/etc/nixos/#trobukan'";
   };
 
   system.stateVersion = "25.11";

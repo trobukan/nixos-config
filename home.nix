@@ -1,4 +1,9 @@
-{ _config, _pkgs, ... }:
+{
+  _config,
+  pkgs,
+  inputs,
+  ...
+}:
 
 {
   imports = [
@@ -11,8 +16,37 @@
   home.username = "trobukan";
   home.homeDirectory = "/home/trobukan";
 
+  home.packages = with pkgs; [
+    btop
+    fzf
+    fd
+    ripgrep
+    gcc
+    go
+    cargo
+    gnumake
+    nodejs_24
+    python311
+    sqlite
+    love
+    luajitPackages.luarocks_bootstrap
+    luajit_2_0
+    trash-cli
+
+    imagemagick
+    yazi
+    librewolf
+    zathura
+    ncpamixer
+    inputs.fsel.packages.${pkgs.stdenv.hostPlatform.system}.default
+
+    swww
+
+    ghostscript
+    tectonic
+  ];
+
   programs.git = {
-    enable = true;
     settings = {
       user = {
         name = "trobukan";
