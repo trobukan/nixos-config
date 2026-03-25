@@ -7,15 +7,12 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    fsel.url = "github:Mjoyufull/fsel";
   };
 
   outputs =
     {
       self,
       nixpkgs,
-      fsel,
       home-manager,
       ...
     }@inputs:

@@ -1,7 +1,7 @@
 binds {
     MOD+SHIFT+RETURN                     { show-hotkey-overlay; }
     MOD+RETURN                          repeat=false { spawn-sh "kitty"; }
-    MOD+SPACE                           repeat=false { spawn-sh "kitty --app-id=launcher  fsel -d"; }
+    MOD+SPACE                           repeat=false { spawn-sh "fuzzel"; }
     MOD+B                               repeat=false hotkey-overlay-title="Open Browser: librewolf" { spawn-sh "librewolf"; }
     MOD+P 				{ spawn-sh "kitty ncpamixer"; }
     

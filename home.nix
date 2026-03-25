@@ -10,6 +10,7 @@
     ./modules/home/sh.nix
     ./modules/home/kitty.nix
     ./modules/home/neovim.nix
+    ./modules/home/fuzzel.nix
 
     ./modules/home/niri/niri.nix
     ./modules/home/yazi/yazi.nix
@@ -40,8 +41,6 @@
     librewolf
     zathura
     ncpamixer
-    inputs.fsel.packages.${pkgs.stdenv.hostPlatform.system}.default
-
     swww
 
     ghostscript
@@ -49,7 +48,6 @@
   ];
 
   programs.git = {
-    enable = true;
     settings = {
       user = {
         name = "trobukan";
