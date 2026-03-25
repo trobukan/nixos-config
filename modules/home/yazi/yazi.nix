@@ -1,23 +1,55 @@
-{ inputs, ... }:
+{ pkgs, ... }:
 
 {
-  imports = [
-    (inputs.nix-yazi-plugins.legacyPackages.x86_64-linux.homeManagerModules.default)
-  ];
-
   programs.yazi = {
     enable = true;
     enableBashIntegration = true;
-    settings = {
-      yazi = ./yazi.toml;
-      theme = ./theme.toml;
+    shellWrapperName = "y";
+    plugins = {
+      inherit (pkgs.yaziPlugins) full-border starship;
     };
-  };
+    initLua = ./init.lua;
+    settings = {
+      mgr = {
+        show_hidden = true;
+      };
+      opener = {
+        edit = [
+          {
+            run = ''$EDITOR "$@"'';
+            block = true;
+            for = "unix";
+          }
+        ];
+        open = [
+          {
+            run = ''zathura "$@"'';
+            block = true;
+            for = "unix";
+          }
+        ];
+      };
 
-  programs.yazi.yaziPlugins = {
-    enable = true;
-    full-border = {
-      enable = true;
+      open = {
+        prepend_rules = [
+          {
+            name = "*.md";
+            use = "edit";
+          }
+        ];
+      };
+    };
+    theme = {
+      mgr = {
+        find_keyword = {
+          fg = "blue";
+          bg = "white";
+          reversed = true;
+        };
+        border_style = {
+          fg = "blue";
+        };
+      };
     };
   };
 }

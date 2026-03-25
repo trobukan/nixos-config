@@ -9,9 +9,9 @@
   imports = [
     ./modules/home/sh.nix
     ./modules/home/kitty.nix
-    ./modules/home/yazi.nix
 
     ./modules/home/niri/niri.nix
+    ./modules/home/yazi/yazi.nix
     ./modules/home/waybar/waybar.nix
   ];
 
@@ -48,11 +48,14 @@
   ];
 
   programs.git = {
+    enable = true;
     settings = {
       user = {
         name = "trobukan";
         email = "trobukan@gmail.com";
       };
+      init.defaultBranch = "main";
+      safe.directory = "/etc/nixos";
     };
   };
 
