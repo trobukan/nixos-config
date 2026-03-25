@@ -14,8 +14,12 @@
   programs.git = {
     enable = true;
     settings = {
-      name = "trobukan";
-      email = "trobukan@gmail.com";
+      user = {
+        name = "trobukan";
+        email = "trobukan@gmail.com";
+      };
+      safe.directory = "/etc/nixos";
+
     };
 
   };
