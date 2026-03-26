@@ -3,23 +3,13 @@
 {
   home.pointerCursor = {
     gtk.enable = true;
-    package = pkgs.catppuccin-cursors.mochaDark;
-    name = "catppuccin-mocha-dark-cursors";
+    package = pkgs.phinger-cursors;
+    name = "phinger-cursors-dark";
     size = 24;
   };
 
-  gtk = {
-    enable = true;
-    gtk4.theme = null;
-    cursorTheme = {
-      package = pkgs.catppuccin-cursors.mochaDark;
-      name = "catppuccin-mocha-dark-cursors";
-      size = 24;
-    };
-  };
-
   home.sessionVariables = {
-    XCURSOR_THEME = "catppuccin-mocha-dark-cursors";
+    XCURSOR_THEME = "phinger-cursors-dark";
     XCURSOR_SIZE = "24";
   };
 }

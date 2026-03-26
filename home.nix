@@ -45,6 +45,7 @@
 
     ghostscript
     tectonic
+    vesktop
   ];
 
   programs.git = {
