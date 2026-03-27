@@ -8,6 +8,7 @@
         icons-enabled = false;
         terminal = "${pkgs.kitty}/bin/kitty";
         layer = "overlay";
+        font = "JetBrainsMono NL Nerd Font:size=12";
       };
       border = {
         radius = 0;
