@@ -17,6 +17,9 @@
         style = "bold blue";
         format = "[$path]($style)";
       };
+      git_branch = {
+        style = "bold blue";
+      };
     };
   };
 
