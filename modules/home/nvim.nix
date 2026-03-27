@@ -91,6 +91,15 @@
       };
     };
 
+    plugins.mini-cmdline = {
+      enable = true;
+      settings = {
+        autocomplete.enable = true;
+        autocorrect.enable = true;
+        autopeek.enable = true;
+      };
+    };
+
     plugins.mini-starter.enable = true;
 
     plugins.treesitter = {
