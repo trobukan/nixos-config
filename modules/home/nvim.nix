@@ -5,7 +5,6 @@
 }:
 
 {
-
   imports = [
     inputs.nixvim.homeModules.nixvim
   ];
@@ -60,6 +59,21 @@
         taplo.enable = true;
         jsonls.enable = true;
       };
+
+      keymaps = {
+        diagnostic = {
+          "<leader>j" = "goto_next";
+          "<leader>k" = "goto_prev";
+        };
+        lspBuf = {
+          "gd" = "definition";
+          "gD" = "references";
+          "gt" = "type_definition";
+          "gi" = "implementation";
+          "K" = "hover";
+        };
+      };
+
     };
 
     plugins.conform-nvim = {
@@ -102,10 +116,6 @@
       };
     };
 
-    plugins.mini-notify.enable = true;
-    plugins.mini-starter.enable = true;
-    plugins.mini-pairs.enable = true;
-
     plugins.treesitter = {
       enable = true;
       highlight.enable = true;
@@ -132,12 +142,35 @@
       ];
     };
 
-    plugins = {
-      none-ls.enable = true;
-      telescope.enable = true;
-      web-devicons.enable = true;
-      oil.enable = true;
+    plugins.lspsaga = {
+      settings = {
+        lightbulb.enable = false;
+        implement.enable = false;
+      };
     };
+
+    plugins.toggleterm = {
+      enable = true;
+      settings = {
+        direction = "float";
+        height = 30;
+        width = 130;
+        highlights = {
+          FloatBorder.guifg = "#5a93d8";
+        };
+        open_mapping = "[[<C-.>]]";
+      };
+    };
+
+    plugins.mini-notify.enable = true;
+    plugins.mini-starter.enable = true;
+    plugins.mini-pairs.enable = true;
+
+    plugins.none-ls.enable = true;
+    plugins.telescope.enable = true;
+    plugins.web-devicons.enable = true;
+    plugins.oil.enable = true;
+    plugins.which-key.enable = true;
 
     clipboard = {
       providers.wl-copy = {
@@ -156,6 +189,11 @@
         mode = "n";
         key = "<leader>ff";
         action = "<cmd>Telescope find_files<CR>";
+      }
+      {
+        mode = "n";
+        key = "<leader>fd";
+        action = "<cmd>Telescope diagnostics<CR>";
       }
       {
         mode = "n";
