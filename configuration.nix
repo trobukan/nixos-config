@@ -96,7 +96,6 @@
     vim
     wget
     unzip
-    git
   ];
 
   fonts = {
