@@ -21,7 +21,6 @@
   home.homeDirectory = "/home/trobukan";
 
   home.packages = with pkgs; [
-    tree-sitter
     btop
     fzf
     fd

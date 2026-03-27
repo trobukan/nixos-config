@@ -5,6 +5,7 @@
 }:
 
 {
+
   imports = [
     inputs.nixvim.homeModules.nixvim
   ];
@@ -15,6 +16,7 @@
     nixfmt
     golines
     gotools
+    tree-sitter
   ];
 
   programs.nixvim = {
@@ -96,11 +98,13 @@
       settings = {
         autocomplete.enable = true;
         autocorrect.enable = true;
-        autopeek.enable = true;
+        autopeek.enable = false;
       };
     };
 
+    plugins.mini-notify.enable = true;
     plugins.mini-starter.enable = true;
+    plugins.mini-pairs.enable = true;
 
     plugins.treesitter = {
       enable = true;
@@ -130,7 +134,6 @@
 
     plugins = {
       none-ls.enable = true;
-      bqlink-cmp.enable = true;
       telescope.enable = true;
       web-devicons.enable = true;
       oil.enable = true;
