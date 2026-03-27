@@ -8,7 +8,7 @@
   imports = [
     ./modules/home/sh.nix
     ./modules/home/kitty.nix
-    ./modules/home/neovim.nix
+    ./modules/home/nvim.nix
     ./modules/home/fuzzel.nix
     ./modules/home/cursor.nix
 
@@ -21,6 +21,7 @@
   home.homeDirectory = "/home/trobukan";
 
   home.packages = with pkgs; [
+    tree-sitter
     btop
     fzf
     fd
