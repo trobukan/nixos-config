@@ -165,11 +165,11 @@
     plugins.mini-notify.enable = true;
     plugins.mini-starter.enable = true;
     plugins.mini-pairs.enable = true;
+    plugins.mini-files.enable = true;
 
     plugins.none-ls.enable = true;
     plugins.telescope.enable = true;
     plugins.web-devicons.enable = true;
-    plugins.oil.enable = true;
     plugins.which-key.enable = true;
 
     clipboard = {
@@ -183,7 +183,7 @@
       {
         mode = "n";
         key = "<leader>e";
-        action = "<cmd>Oil<CR>";
+        action = "<cmd>lua MiniFiles.open()<CR>";
       }
       {
         mode = "n";
