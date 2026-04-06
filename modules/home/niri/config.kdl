@@ -19,16 +19,6 @@ gestures {
 screenshot-path "~/Pictures/Screenshots/%Y-%m-%d %H:%M:%S.png"
 prefer-no-csd 
 
-environment {
-    DISPLAY ":1"
-    ELECTRON_OZONE_PLATFORM_HINT "auto"
-    QT_QPA_PLATFORM "wayland"
-    QT_WAYLAND_DISABLE_WINDOWDECORATION "1"
-    XDG_SESSION_TYPE "wayland"
-    XDG_CURRENT_DESKTOP "niri"
-    EDITOR "nvim"
-}
-
 hotkey-overlay {
     skip-at-startup
 }

@@ -40,6 +40,7 @@
     LC_TIME = "pt_BR.UTF-8";
   };
 
+  hardware.graphics.enable32Bit = true;
   hardware.graphics = {
     enable = true;
   };
@@ -88,15 +89,26 @@
     ];
   };
 
-  services.openssh.enable = true;
-
   programs.niri.enable = true;
+  programs.xwayland.enable = true;
 
   environment.systemPackages = with pkgs; [
     vim
     wget
     unzip
   ];
+
+  environment.sessionVariables = {
+    DISPLAY = ":1";
+    ELECTRON_OZONE_PLATFORM_HINT = "auto";
+    QT_QPA_PLATFORM = "wayland";
+    QT_WAYLAND_DISABLE_WINDOWDECORATION = "1";
+    XDG_SESSION_TYPE = "wayland";
+    XDG_CURRENT_DESKTOP = "niri";
+    EDITOR = "nvim";
+
+    NIXOS_OZONE_WL = "1";
+  };
 
   fonts = {
     packages = with pkgs; [
