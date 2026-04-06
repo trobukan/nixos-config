@@ -37,15 +37,18 @@
     luajit_2_0
     trash-cli
 
+    obsidian
+    qpwgraph
     imagemagick
+    discord
     librewolf
+    steam
     zathura
     ncpamixer
-    swww
+    awww
 
     ghostscript
     tectonic
-    vesktop
   ];
 
   programs.git = {
