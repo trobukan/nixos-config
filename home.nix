@@ -27,9 +27,14 @@
     ripgrep
     gcc
     go
+    zig
+    upx
     cargo
+    rustc
     gnumake
     nodejs
+    tsx
+    typescript
     python3
     sqlite
     love
@@ -37,6 +42,11 @@
     luajit_2_0
     trash-cli
 
+    typtea
+    nautilus
+    kdePackages.kdenlive
+    handbrake
+    godot
     obsidian
     qpwgraph
     imagemagick
@@ -49,6 +59,9 @@
 
     ghostscript
     tectonic
+
+    benhsm-minesweeper
+    minefair
   ];
 
   programs.git = {
@@ -62,6 +75,18 @@
       safe.directory = "/etc/nixos";
     };
   };
+
+  home.sessionVariables = {
+    EDITOR = "nvim";
+    GOPATH = "$HOME/go";
+    GDTOOLCHAIN = "local";
+    GDPATH = "$HOME";
+  };
+
+  home.sessionPath = [
+    "$HOME/go/bin"
+    "$HOME/.cargo/bin:$PATH"
+  ];
 
   home.stateVersion = "25.11";
 
