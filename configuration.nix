@@ -105,7 +105,6 @@
     QT_WAYLAND_DISABLE_WINDOWDECORATION = "1";
     XDG_SESSION_TYPE = "wayland";
     XDG_CURRENT_DESKTOP = "niri";
-    EDITOR = "nvim";
 
     NIXOS_OZONE_WL = "1";
   };

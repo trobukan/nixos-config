@@ -1,64 +1,64 @@
 {
-  "layer": "top",
-  "position": "top",
-  "height": 26,
-  "spacing": 7,
-  "modules-left": [
-    "niri/workspaces"
-  ],
-  "modules-center": [
-    "clock"
-  ],
-  "modules-right": [
-    "niri/language",
-    "memory",
-    "pulseaudio",
-    "network"
-  ],
-  "niri/workspaces": {
-    "format": "{icon}",
-    "format-icons": {
-      "active": "\uf444",
-      "default": "\uf4c3"
-    },
-    "sort-by-number": true
-  },
-  "niri/language": {
-    "format": "{short}"
-  },
-  "clock": {
-    "format": "{:%d.%m.%Y | %H:%M}"
-  },
-  "pulseaudio": {
-    "format": "\udb81\udd7e {volume}%",
-    "max-volume": 100,
-    "scroll-step": 5
-  },
-  "memory": {
-    "interval": 1,
-    "format": "\uf4bc {percentage}% "
-  },
-  "network": {
-    "format": "",
-    "format-ethernet": "\udb83\udc9d",
-    "format-wifi": "{icon}",
-    "format-disconnected": "\udb83\udc9c",
-    "format-icons": [
-      "\udb82\udd2f",
-      "\udb82\udd1f",
-      "\udb82\udd22",
-      "\udb82\udd25",
-      "\udb82\udd28"
-    ],
-    "tooltip-format-wifi": "{essid} ({signalStrength}%)",
-    "tooltip-format-ethernet": "{ifname}",
-    "tooltip-format-disconnected": "Disconnected"
-  },
-  "idle_inhibitor": {
-    "format": "{icon}",
-    "format-icons": {
-      "activated": "\udb80\udd76",
-      "deactivated": "\udb83\udfaa"
-    }
-  }
+	"layer": "top",
+	"position": "top",
+	"height": 26,
+	"spacing": 7,
+	"modules-left": [
+		"niri/workspaces"
+	],
+	"modules-center": [
+		"clock"
+	],
+	"modules-right": [
+		"niri/language",
+		"memory",
+		"pulseaudio",
+		"network"
+	],
+	"niri/workspaces": {
+		"format": "{icon}",
+		"format-icons": {
+			"active": "\uf444",
+			"default": "\uf4c3"
+		},
+		"sort-by-number": true
+	},
+	"niri/language": {
+		"format": "{short}"
+	},
+	"clock": {
+		"format": "{:%d.%m.%Y | %H:%M}"
+	},
+	"pulseaudio": {
+		"format": "\udb81\udd7e {volume}%",
+		"max-volume": 100,
+		"scroll-step": 5
+	},
+	"memory": {
+		"interval": 1,
+		"format": "\uf4bc {percentage}% "
+	},
+	"network": {
+		"format": "",
+		"format-ethernet": "\udb83\udc9d",
+		"format-wifi": "{icon}",
+		"format-disconnected": "\udb83\udc9c",
+		"format-icons": [
+			"\udb82\udd2f",
+			"\udb82\udd1f",
+			"\udb82\udd22",
+			"\udb82\udd25",
+			"\udb82\udd28"
+		],
+		"tooltip-format-wifi": "{essid} ({signalStrength}%)",
+		"tooltip-format-ethernet": "{ifname}",
+		"tooltip-format-disconnected": "Disconnected"
+	},
+	"idle_inhibitor": {
+		"format": "{icon}",
+		"format-icons": {
+			"activated": "\udb80\udd76",
+			"deactivated": "\udb83\udfaa"
+		}
+	}
 }
