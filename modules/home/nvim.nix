@@ -16,6 +16,11 @@
     golines
     gotools
     tree-sitter
+    rustfmt
+    rust-analyzer
+    typescript-language-server
+    prettier
+    vscode-langservers-extracted
   ];
 
   programs.nixvim = {
@@ -58,6 +63,9 @@
         marksman.enable = true;
         taplo.enable = true;
         jsonls.enable = true;
+        ts_ls.enable = true;
+        html.enable = true;
+        cssls.enable = true;
       };
 
       keymaps = {
@@ -91,6 +99,11 @@
             "golines"
           ];
           nix = [ "nixfmt" ];
+          rust = [ "rustfmt" ];
+          javascript = [ "prettier" ];
+          typescript = [ "prettier" ];
+          css = [ "prettier" ];
+          html = [ "prettier" ];
         };
       };
     };
@@ -127,12 +140,18 @@
         bash
         query
 
+        javascript
+        typescript
+        tsx
+        rust
         go
         gomod
         gowork
         templ
         nix
         markdown
+        html
+        css
 
         json
         yaml
@@ -171,6 +190,10 @@
     plugins.telescope.enable = true;
     plugins.web-devicons.enable = true;
     plugins.which-key.enable = true;
+    plugins.markview.enable = true;
+
+    plugins.rustaceanvim.enable = true;
+    plugins.crates.enable = true;
 
     clipboard = {
       providers.wl-copy = {
