@@ -54,6 +54,8 @@
     package = config.boot.kernelPackages.nvidiaPackages.stable;
   };
 
+  services.openssh.enable = true;
+
   services.xserver = {
     enable = true;
     xkb = {

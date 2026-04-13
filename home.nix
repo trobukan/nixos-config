@@ -41,7 +41,10 @@
     luajitPackages.luarocks_bootstrap
     luajit_2_0
     trash-cli
+    openssl
 
+    bruno
+    posting
     typtea
     nautilus
     kdePackages.kdenlive
