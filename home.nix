@@ -33,7 +33,7 @@
     rustc
     gnumake
     nodejs
-    nodejs-slim
+    pnpm
     tsx
     typescript
     python3
@@ -44,6 +44,8 @@
     trash-cli
     openssl
 
+    blockbench
+    blender
     bruno
     posting
     typtea
@@ -89,7 +91,8 @@
 
   home.sessionPath = [
     "$HOME/go/bin"
-    "$HOME/.cargo/bin:$PATH"
+    "$HOME/.cargo/bin"
+    "$HOME/.npm-global/bin"
   ];
 
   home.stateVersion = "25.11";
