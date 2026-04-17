@@ -33,6 +33,7 @@
     rustc
     gnumake
     nodejs
+    nodejs-slim
     tsx
     typescript
     python3
