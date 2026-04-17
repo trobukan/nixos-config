@@ -21,6 +21,7 @@
     typescript-language-server
     prettier
     vscode-langservers-extracted
+    biome
   ];
 
   programs.nixvim = {
@@ -66,6 +67,7 @@
         ts_ls.enable = true;
         html.enable = true;
         cssls.enable = true;
+        biome.enable = true;
       };
 
       keymaps = {
@@ -100,10 +102,10 @@
           ];
           nix = [ "nixfmt" ];
           rust = [ "rustfmt" ];
-          javascript = [ "prettier" ];
-          typescript = [ "prettier" ];
-          css = [ "prettier" ];
-          html = [ "prettier" ];
+          javascript = [ "biome" ];
+          typescript = [ "biome" ];
+          css = [ "biome" ];
+          html = [ "biome" ];
         };
       };
     };
