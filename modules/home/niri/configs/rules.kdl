@@ -24,7 +24,6 @@ window-rule {
 // Launcher 
 window-rule {
   match app-id="launcher"
-  
 
   default-column-width { proportion 0.5; }
   default-window-height { proportion 0.5; }
