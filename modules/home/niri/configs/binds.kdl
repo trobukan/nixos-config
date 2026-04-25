@@ -1,75 +1,74 @@
 binds {
-    MOD+SHIFT+RETURN                     { show-hotkey-overlay; }
-    MOD+RETURN                          repeat=false { spawn-sh "kitty"; }
-    MOD+SPACE                           repeat=false { spawn-sh "fuzzel"; }
-    MOD+B                               repeat=false hotkey-overlay-title="Open Browser: librewolf" { spawn-sh "librewolf"; }
-    MOD+P 				{ spawn-sh "kitty ncpamixer"; }
-    
-    MOD+E { spawn-sh "kitty --app-id=yazi yazi"; }
+    // Applications
+    MOD+RETURN repeat=false {spawn-sh "kitty"; }
+    MOD+SPACE repeat=false {spawn-sh "fuzzel"; }
+    MOD+B repeat=false {spawn-sh "librewolf"; }
+    MOD+P {spawn-sh "kitty ncpamixer"; }
+    MOD+E {spawn-sh "kitty --app-id=yazi yazi"; }
 
-    MOD+UP          allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+"; }
-    MOD+DOWN        allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1-"; }
-    MOD+LEFT        allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"; }
-    MOD+RIGHT       allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"; }
+    // Audio
+    MOD+UP allow-when-locked=true {spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+"; }
+    MOD+DOWN allow-when-locked=true {spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1-"; }
+    MOD+LEFT allow-when-locked=true {spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"; }
+    MOD+RIGHT allow-when-locked=true {spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"; }
 
-    MOD+Q                               { close-window; }
+    // Focus column/windows
+    MOD+H { focus-column-left; }
+    MOD+L { focus-column-right; }
+    MOD+K { focus-window-up; }
+    MOD+J { focus-window-down; }
 
-    MOD+H                               { focus-column-left; }
-    MOD+L                               { focus-column-right; }
-    MOD+K                               { focus-window-up; }
-    MOD+J                               { focus-window-down; }
+    // Move Column
+    MOD+SHIFT+H { move-column-left; }
+    MOD+SHIFT+L { move-column-right; }
+    MOD+SHIFT+K { move-window-up; }
+    MOD+SHIFT+J { move-window-down; }
 
-    MOD+SHIFT+H                          { move-column-left; }
-    MOD+SHIFT+L                          { move-column-right; }
-    MOD+SHIFT+K                          { move-window-up; }
-    MOD+SHIFT+J                          { move-window-down; }
+    // Consume or expel window
+    MOD+CTRL+H { consume-or-expel-window-left; }
+    MOD+CTRL+L { consume-or-expel-window-right; }
 
-    MOD+HOME                            { focus-column-first; }
-    MOD+END                             { focus-column-last; }
-    MOD+CTRL+HOME                       { move-column-to-first; }
-    MOD+CTRL+END                        { move-column-to-last; }
+    // Change workspace
+    MOD+1 { focus-workspace 1; }
+    MOD+2 { focus-workspace 2; }
+    MOD+3 { focus-workspace 3; }
+    MOD+4 { focus-workspace 4; }
+    MOD+5 { focus-workspace 5; }
+    MOD+6 { focus-workspace 6; }
+    MOD+7 { focus-workspace 7; }
+    MOD+8 { focus-workspace 8; }
+    MOD+9 { focus-workspace 9; }
 
-    MOD+1                               { focus-workspace 1; }
-    MOD+2                               { focus-workspace 2; }
-    MOD+3                               { focus-workspace 3; }
-    MOD+4                               { focus-workspace 4; }
-    MOD+5                               { focus-workspace 5; }
-    MOD+6                               { focus-workspace 6; }
-    MOD+7                               { focus-workspace 7; }
-    MOD+8                               { focus-workspace 8; }
-    MOD+9                               { focus-workspace 9; }
+    // Move column to workspaces
+    MOD+SHIFT+1 { move-column-to-workspace 1; }
+    MOD+SHIFT+2 { move-column-to-workspace 2; }
+    MOD+SHIFT+3 { move-column-to-workspace 3; }
+    MOD+SHIFT+4 { move-column-to-workspace 4; }
+    MOD+SHIFT+5 { move-column-to-workspace 5; }
+    MOD+SHIFT+6 { move-column-to-workspace 6; }
+    MOD+SHIFT+7 { move-column-to-workspace 7; }
+    MOD+SHIFT+8 { move-column-to-workspace 8; }
+    MOD+SHIFT+9 { move-column-to-workspace 9; }
 
-    MOD+SHIFT+1                          { move-column-to-workspace 1; }
-    MOD+SHIFT+2                          { move-column-to-workspace 2; }
-    MOD+SHIFT+3                          { move-column-to-workspace 3; }
-    MOD+SHIFT+4                          { move-column-to-workspace 4; }
-    MOD+SHIFT+5                          { move-column-to-workspace 5; }
-    MOD+SHIFT+6                          { move-column-to-workspace 6; }
-    MOD+SHIFT+7                          { move-column-to-workspace 7; }
-    MOD+SHIFT+8                          { move-column-to-workspace 8; }
-    MOD+SHIFT+9                          { move-column-to-workspace 9; }
+    // Window manipulation
+    MOD+Q { close-window; }
+    MOD+F { expand-column-to-available-width; }
+    MOD+C { center-column; }
+    MOD+SHIFT+C { center-visible-columns; }
+    MOD+MINUS { set-column-width "-10%"; }
+    MOD+EQUAL { set-column-width "+10%"; }
+    MOD+SHIFT+MINUS { set-window-height "-10%"; }
+    MOD+SHIFT+EQUAL { set-window-height "+10%"; }
+    MOD+T { toggle-window-floating; }
+    MOD+SHIFT+F { fullscreen-window; }
 
-    MOD+TAB                             { focus-workspace-previous; }
+    Print { screenshot; }
+    CTRL+SHIFT+1 { screenshot; }
+    CTRL+SHIFT+2 { screenshot-screen; }
+    CTRL+SHIFT+3 { screenshot-window; }
 
-    MOD+F                          { expand-column-to-available-width; }
-    MOD+C                               { center-column; }
-    MOD+SHIFT+C                          { center-visible-columns; }
-    MOD+MINUS                           { set-column-width "-10%"; }
-    MOD+EQUAL                           { set-column-width "+10%"; }
-    MOD+SHIFT+MINUS                     { set-window-height "-10%"; }
-    MOD+SHIFT+EQUAL                     { set-window-height "+10%"; }
-
-    MOD+T                               { toggle-window-floating; }
-    MOD+SHIFT+F                               { fullscreen-window; }
-
-    Print {screenshot;}
-    CTRL+SHIFT+1                        { screenshot; }
-    CTRL+SHIFT+2                        { screenshot-screen; }
-    CTRL+SHIFT+3                        { screenshot-window; }
-
-    MOD+ESCAPE                          allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
-
-    CTRL+ALT+DELETE                     { quit; } 
-    MOD+SHIFT+P                         { power-off-monitors; } 
-    MOD+O                               repeat=false { toggle-overview; }
+    CTRL+ALT+DELETE { quit; }
+    MOD+SHIFT+P { power-off-monitors; }
+    MOD+O repeat=false { toggle-overview; }
   }
+

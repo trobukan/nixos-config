@@ -1,16 +1,15 @@
 input {
     keyboard {
         xkb {
-            layout "us, es, br" 
+            layout "us, es, br"
             options "grp:alt_shift_toggle"
         }
-        numlock 
+        numlock
     }
-
-    workspace-auto-back-and-forth 
+    workspace-auto-back-and-forth
+}
+output "HDMI-A-1" {
+    mode "1920x1080@74.973"
+    scale 1
 }
 
- output "HDMI-A-1" {
-    mode "1920x1080@74.973" 
-    scale 1 
-}
