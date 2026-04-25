@@ -1,4 +1,4 @@
-{ _config, _pgks, ... }:
+{ config, ... }:
 
 {
   programs.starship = {
@@ -32,7 +32,9 @@
   programs.bash = {
     enable = true;
     shellAliases = {
-      rebuild = "sudo nixos-rebuild switch --flake '/etc/nixos/#trobukan'";
+      nr = "sudo nixos-rebuild switch --flake '/etc/nixos/#${config.home.username}'";
+      nt = "sudo nixos-rebuild test --flake '/etc/nixos/#${config.home.username}'";
+      nc = "sudo nixos-rebuild dry-build --flake 'etc/nixos/#${config.home.username}'";
     };
   };
 }
