@@ -1,16 +1,18 @@
-{ ... }:
+{ config, ... }:
 
 let
-  style = import ./waybar-style.nix { };
+  style = import ./waybar-style.nix {
+    font = config.global-settings.font;
+  };
   formats = {
     clock = "[{:%d.%m.%Y | %H:%M}]";
     niri-language = "[{short}]";
     niri-workspaces = "[{value}]";
-    pulseaudio = "[󱀞 {volume}%]";
-    memory = "[ {percentage}%]";
+    pulseaudio = "[audio {volume}%]";
+    memory = "[ram {percentage}%]";
     network = {
-      ethernet = "[ ]";
-      disconnected = "[󰖪 ]";
+      ethernet = "[lan on]";
+      disconnected = "[net off]";
     };
   };
 in

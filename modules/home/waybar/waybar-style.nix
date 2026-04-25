@@ -1,7 +1,6 @@
-{ }:
+{ font, ... }:
 
 let
-  font = "JetBrainsMono Nerd Font";
   colors = {
     background = "rgba(0, 0, 0, 0.7)";
     foreground = "rgba(90, 147, 216, 1)";
@@ -14,8 +13,8 @@ in
   @define-color background rgba(0, 0, 0, 0.7);
 
   * {
-      font-family: ${font};
-      font-size: 14px;
+      font-family: "${font}";
+      font-size: 20px;
       padding: 0;
       margin: 0;
   }
