@@ -1,11 +1,12 @@
 {
-  config,
   pkgs,
   ...
 }:
 
 {
   imports = [
+    ./settings.nix
+
     ./modules/home/sh.nix
     ./modules/home/kitty.nix
     ./modules/home/nvim.nix
@@ -17,16 +18,24 @@
     ./modules/home/waybar/waybar.nix
   ];
 
+  global-settings = {
+    font = "3270 Nerd Font Mono";
+  };
+
   home.username = "trobukan";
   home.homeDirectory = "/home/trobukan";
 
   home.packages = with pkgs; [
+    busybox
+    vlc
     btop
     fzf
     fd
     ripgrep
     gcc
     go
+    air
+    delve
     zig
     upx
     cargo
