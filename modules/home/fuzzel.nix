@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ config, pkgs, ... }:
 
 {
   programs.fuzzel = {
@@ -8,7 +8,7 @@
         icons-enabled = false;
         terminal = "${pkgs.kitty}/bin/kitty";
         layer = "overlay";
-        font = "JetBrainsMono NL Nerd Font:size=12";
+        font = "${config.global-settings.font}:size=16";
       };
       border = {
         radius = 0;

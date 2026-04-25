@@ -1,14 +1,15 @@
-{ _config, _pkgs, ... }:
+{ config, ... }:
 
 {
   programs.kitty = {
     enable = true;
     settings = {
-      font_family = "JetBrainsMono NL Nerd Font";
-      font_size = "12";
+      font_family = config.global-settings.font;
+      font_size = "16";
       cursor_trail = "1";
       cursor_trail_decay = "0.1 0.4";
       cursor_shape = "beam";
+      cursor_beam_thickness = "0.5";
       background_opacity = "0.7";
 
       enable_audio_bell = "no";
