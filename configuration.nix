@@ -54,6 +54,11 @@
     package = config.boot.kernelPackages.nvidiaPackages.stable;
   };
 
+  services.mysql = {
+    enable = true;
+    package = pkgs.mariadb;
+  };
+
   services.openssh.enable = true;
 
   services.xserver = {
@@ -104,7 +109,6 @@
   ];
 
   environment.sessionVariables = {
-    DISPLAY = ":1";
     ELECTRON_OZONE_PLATFORM_HINT = "auto";
     QT_QPA_PLATFORM = "wayland";
     QT_WAYLAND_DISABLE_WINDOWDECORATION = "1";
