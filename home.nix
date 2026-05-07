@@ -26,6 +26,8 @@
   home.homeDirectory = "/home/trobukan";
 
   home.packages = with pkgs; [
+    thunar
+    s-tui
     busybox
     vlc
     btop
@@ -53,6 +55,7 @@
     trash-cli
     openssl
 
+    krita
     blockbench
     blender
     bruno
