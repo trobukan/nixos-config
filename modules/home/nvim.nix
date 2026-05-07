@@ -196,6 +196,7 @@
 
     plugins.rustaceanvim.enable = true;
     plugins.crates.enable = true;
+    plugins.neocord.enable = true;
 
     clipboard = {
       providers.wl-copy = {
