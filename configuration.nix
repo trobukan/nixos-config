@@ -15,7 +15,7 @@
 
   networking.hostName = "nixos";
   networking.networkmanager.enable = true;
-  networking.firewall.enable = false;
+  networking.firewall.enable = true;
 
   nix.settings.experimental-features = [
     "nix-command"
@@ -55,7 +55,7 @@
   };
 
   services.mysql = {
-    enable = true;
+    enable = false;
     package = pkgs.mariadb;
   };
 
